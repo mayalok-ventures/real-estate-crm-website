@@ -430,7 +430,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 6. CoreSetu Foundation & Technical Architecture */}
+      {/* 6. Mayalok Platform Foundation & Technical Architecture */}
       <section className="py-20 bg-slate-900 text-white border-b border-slate-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
@@ -439,7 +439,7 @@ export default function AboutPage() {
                 PLATFORM FOUNDATION
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-heading">
-                The CoreSetu Foundation
+                The Mayalok Foundation
               </h2>
             </div>
             <div className="md:col-span-8 space-y-4 text-sm text-slate-300 leading-relaxed">
@@ -447,7 +447,7 @@ export default function AboutPage() {
                 Architectural stability for mission-critical real estate sales data.
               </p>
               <p>
-                Underneath Sahyak CRM lies CoreSetu, the modular multi-tenant application foundation developed by Mayalok Ventures. CoreSetu provides tenant data isolation, secure authentication, role-based access control, and resilient webhook ingress event queues.
+                Underneath Sahyak CRM lies the modular multi-tenant application foundation developed by Mayalok Ventures (<a href="https://mayalokventures.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">mayalokventures.com</a>). The architecture provides tenant data isolation, secure authentication, role-based access control, and resilient webhook ingress event queues.
               </p>
               <p>
                 This architectural separation ensures that client records, lead pipelines, and broker interactions remain strictly isolated per organization, while enabling rapid deployment of specialized real estate workflows.
@@ -459,7 +459,7 @@ export default function AboutPage() {
           <div className="rounded-3xl overflow-hidden border border-slate-800 bg-slate-950 text-white shadow-xl">
             <div className="p-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between text-xs font-mono text-slate-400">
               <span className="text-cyan-400 font-bold">Platform Foundation Bridge</span>
-              <span>about-coresetu-bridge.mp4</span>
+              <span>about-platform-bridge.mp4</span>
             </div>
             <div className="aspect-video w-full bg-slate-950 flex items-center justify-center">
               <video
@@ -469,9 +469,9 @@ export default function AboutPage() {
                 playsInline
                 preload="metadata"
                 className="w-full h-full object-cover"
-                aria-label="Sahyak and CoreSetu architectural foundation bridge video"
+                aria-label="Sahyak and Mayalok architectural foundation bridge video"
               >
-                <source src="/videos/about-coresetu-bridge.mp4" type="video/mp4" />
+                <source src="/videos/about-platform-bridge.mp4" type="video/mp4" />
               </video>
             </div>
           </div>

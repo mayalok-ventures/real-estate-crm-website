@@ -978,7 +978,7 @@ Below is the complete audit of every quantitative or factual claim made across t
 | `sahyak-mobile-closer-demo.mp4` | MP4 (1.20 MB) | `public/videos/` | Mobile Closer Engine | **Real Product UI Demonstration** | Mobile recording of 1-tap WhatsApp and closer OS. |
 | `features-integration-ecosystem.mp4` | MP4 (0.97 MB) | `public/videos/` | `/features` Page | **Real Product UI Demonstration** | Ingress and portal synchronization recording. |
 | `security-vault-architecture.mp4` | MP4 (1.13 MB) | `public/videos/` | `/security` Page | **Marketing Mockup / Architectural Motion** | Vault encryption and tenant isolation visualization. |
-| `about-coresetu-bridge.mp4` | MP4 (0.94 MB) | `public/videos/` | `/about` Page | **Marketing Mockup / Architectural Motion** | Modular platform engine demonstration. |
+| `about-platform-bridge.mp4` | MP4 (0.94 MB) | `public/videos/` | `/about` Page | **Marketing Mockup / Architectural Motion** | Modular platform engine demonstration. |
 | `logo.png` / `android-chrome-192x192.png` | PNG | `public/` | Navbar, Footer, Favicons | **Brand Asset** | Official Sahyak CRM icon mark. |
 | `card-features.png`, `card-pricing.png` | PNG | `public/images/` | Static OG / Preview assets | **Marketing Mockup** | High-res card renderings for social previews. |
 

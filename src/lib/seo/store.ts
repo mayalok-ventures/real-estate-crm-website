@@ -1047,7 +1047,7 @@ export const SEED_PAGES: SeoPage[] = [
     title: "About Sahyak CRM — Real Estate First Platform & Company Thesis",
     metaDescription: "Learn about Sahyak CRM: purpose-built sales operations software for real estate developers, brokers, and channel partners. Our story, thesis, and product capabilities.",
     h1: "CRM Built Around How High-Ticket Real Estate Deals Actually Move.",
-    bodyContent: "The company thesis, five-stage property sales motion, target personas, verified product capabilities, and CoreSetu architectural foundation.",
+    bodyContent: "The company thesis, five-stage property sales motion, target personas, verified product capabilities, and Mayalok architectural foundation.",
     canonicalUrl: "https://sahyak.com/about",
     hreflangReferences: [{ lang: "en", url: "https://sahyak.com/about" }, { lang: "x-default", url: "https://sahyak.com/about" }],
     schemaType: "Organization",
