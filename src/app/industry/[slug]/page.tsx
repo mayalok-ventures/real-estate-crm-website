@@ -120,7 +120,7 @@ export default async function IndustrySlugPage({ params }: PageProps) {
               href="/pricing"
               className="px-6 py-3 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm flex items-center gap-2 transition-all shadow-sm"
             >
-              <span>Start Free (20 Leads Included)</span>
+              <span>Start Free</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link

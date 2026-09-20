@@ -510,7 +510,7 @@ export default function PricingPage() {
               href={siteConfig.appSignupUrl}
               className="btn-pill-secondary text-xs sm:text-sm py-3 px-6 font-bold shrink-0 w-full md:w-auto text-center"
             >
-              Start Free — 20 Leads
+              Start Free
             </Link>
           </div>
 

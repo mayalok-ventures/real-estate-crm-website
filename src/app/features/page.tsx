@@ -486,7 +486,7 @@ export default function FeaturesPage() {
               href={siteConfig.appSignupUrl}
               className="btn-pill-brand text-white text-xs py-3.5 px-7 font-bold shadow-md"
             >
-              <span>Start Free — 20 Leads</span>
+              <span>Start Free</span>
               <ArrowRight className="w-4 h-4 ml-1.5" />
             </Link>
             <Link
@@ -723,7 +723,7 @@ export default function FeaturesPage() {
               href={siteConfig.appSignupUrl}
               className="btn-pill-brand text-white text-xs py-3.5 px-8 font-bold shadow-md"
             >
-              <span>Start Free — 20 Leads</span>
+              <span>Start Free</span>
               <ArrowRight className="w-4 h-4 ml-1.5" />
             </Link>
             <Link

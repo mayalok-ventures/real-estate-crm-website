@@ -83,7 +83,7 @@ export function GlobalNavbar() {
             href={siteConfig.appSignupUrl}
             className="btn-pill-brand text-white text-xs py-2.5 px-5 font-semibold shadow-sm"
           >
-            <span>Start Free — 20 Leads</span>
+            <span>Start Free</span>
             <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
           </Link>
         </div>
@@ -129,7 +129,7 @@ export function GlobalNavbar() {
               onClick={() => setMobileOpen(false)}
               className="btn-pill-brand text-xs py-3 w-full text-center justify-center"
             >
-              <span>Start Free — 20 Leads</span>
+              <span>Start Free</span>
               <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
             </Link>
           </div>

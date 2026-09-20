@@ -80,7 +80,7 @@ export default function HomePricingPreview() {
                 href={siteConfig.appSignupUrl}
                 className="w-full py-3.5 px-4 rounded-xl border-2 border-slate-900 hover:bg-slate-900 hover:text-white text-slate-900 font-bold text-xs flex items-center justify-center gap-2 transition-all text-center"
               >
-                <span>Start Free — 20 Leads</span>
+                <span>Start Free</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

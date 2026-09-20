@@ -83,7 +83,7 @@ export default function DualPersonaSection() {
                 href={siteConfig.appSignupUrl}
                 className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#0077ff] hover:bg-blue-700 text-white font-semibold text-xs shadow-md shadow-blue-500/20 transition-all shrink-0"
               >
-                Start Free — 20 Leads
+                Start Free
               </Link>
             </div>
 

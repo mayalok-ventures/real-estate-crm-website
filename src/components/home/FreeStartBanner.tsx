@@ -77,7 +77,7 @@ export default function FreeStartBanner() {
             href={siteConfig.appSignupUrl}
             className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-extrabold text-sm shadow-xl shadow-blue-500/25 transition-all flex items-center justify-center gap-2 group"
           >
-            <span>Start Free — 20 Leads</span>
+            <span>Start Free</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link

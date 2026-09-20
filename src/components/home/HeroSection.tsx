@@ -102,7 +102,7 @@ export function HeroSection() {
               href={siteConfig.appSignupUrl}
               className="btn-pill-brand text-white text-sm py-3.5 px-8 font-semibold group w-full sm:w-auto shadow-md"
             >
-              <span>Start Free — 20 Leads</span>
+              <span>Start Free</span>
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </Link>
             <a
