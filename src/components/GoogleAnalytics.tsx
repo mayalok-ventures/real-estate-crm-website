@@ -7,21 +7,21 @@ import { GA_MEASUREMENT_ID, trackPageView } from "@/lib/gtag";
 
 export function GoogleAnalytics() {
   const pathname = usePathname();
-  const lastTrackedRef = useRef<string | null>(null);
+  const isInitialMount = useRef(true);
 
   const isAdmin = pathname.startsWith("/admin");
 
   useEffect(() => {
     if (isAdmin) return;
 
-    // Track on initial load and route changes (avoiding duplicates)
-    if (lastTrackedRef.current !== pathname) {
-      lastTrackedRef.current = pathname;
-      const timeout = setTimeout(() => {
-        trackPageView(pathname);
-      }, 50);
-      return () => clearTimeout(timeout);
+    // The initial page view is automatically fired by gtag('config', ID).
+    // Subsequent client-side route transitions are tracked here.
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
     }
+
+    trackPageView(pathname);
   }, [pathname, isAdmin]);
 
   // Public website traffic only: Never load Google Analytics scripts or tags on admin routes
@@ -41,11 +41,9 @@ export function GoogleAnalytics() {
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}', {
-              send_page_view: false
-            });
+            window.gtag = function gtag(){window.dataLayer.push(arguments);};
+            window.gtag('js', new Date());
+            window.gtag('config', '${GA_MEASUREMENT_ID}');
           `,
         }}
       />
