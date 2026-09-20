@@ -1,0 +1,47 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/cache
+
+# Testing & Scratch scripts
+/coverage
+/scratch
+
+# Next.js build output
+/.next/
+/out/
+/.vercel/
+
+# Production build artifacts
+/build
+tsconfig.tsbuildinfo
+
+# Cloudflare Pages / Wrangler
+/.wrangler/
+.wrangler
+
+# Environment variables & local secrets (CRITICAL: do not commit local secrets)
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*

@@ -1,0 +1,329 @@
+@import "tailwindcss";
+
+:root {
+  /* 100% Light & Airy Premium Real Estate Tech Palette */
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --surface: #ffffff;
+  --surface-subtle: #f8fafc;
+  --surface-blue: #f5f9ff;
+  --surface-lavender: #f8f7ff;
+  --border: #e2e8f0;
+  --border-subtle: #f1f5f9;
+  --border-blue: #dbeafe;
+  --muted: #64748b;
+  --muted-foreground: #475569;
+
+  /* Logo-Derived Brand Gradient System: Cyan -> Azure -> Periwinkle -> Soft Violet */
+  --brand-cyan: #00a3ff;
+  --brand-azure: #0077ff;
+  --brand-periwinkle: #6366f1;
+  --brand-violet: #7c3aed;
+
+  /* Typography Tokens */
+  --font-heading: var(--font-heading), "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: var(--font-sans), "Plus Jakarta Sans", "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-border-subtle: #f1f5f9;
+  --color-muted: #64748b;
+  --color-muted-foreground: #475569;
+  
+  --color-cyan: #00a3ff;
+  --color-azure: #0077ff;
+  --color-periwinkle: #6366f1;
+  --color-violet: #7c3aed;
+
+  --font-heading: var(--font-heading);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  color-scheme: light;
+  background-color: #ffffff;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-sans);
+  overflow-x: clip;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.tabular-nums,
+.font-numeric {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+.sticky-table-col {
+  position: sticky;
+  left: 0;
+  background-color: inherit;
+  z-index: 10;
+}
+
+.touch-target-44 {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Ambient Product Stage Lighting */
+.stage-ambient-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 119, 255, 0.12) 0%, rgba(124, 58, 237, 0.05) 50%, transparent 80%);
+}
+
+/* Lead Thread Connector Animation */
+.lead-thread-animated {
+  stroke-dasharray: 6 6;
+  animation: leadThreadFlow 24s linear infinite;
+}
+
+@keyframes leadThreadFlow {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -120;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lead-thread-animated {
+    animation: none !important;
+  }
+}
+
+/* Fade-in animation for floating depth cards on hero */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
+
+::selection {
+  background: #0077ff;
+  color: #ffffff;
+}
+
+/* Crisp Technical SaaS Cards */
+.saas-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.02);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.saas-card-interactive {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.saas-card-interactive:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 25px -5px rgba(0, 119, 255, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
+}
+
+/* Atmospheric Gradients */
+.atmospheric-cta-bg {
+  background: linear-gradient(135deg, #f0f7ff 0%, #f5f3ff 50%, #fdf4ff 100%);
+  border: 1px solid #e0e7ff;
+}
+
+.brand-gradient-bg {
+  background: linear-gradient(135deg, #0084ff 0%, #6366f1 50%, #7c3aed 100%);
+}
+
+.brand-gradient-text {
+  background: linear-gradient(135deg, #0084ff 0%, #6366f1 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-azure {
+  background: linear-gradient(135deg, #0084ff 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Primary Brand Buttons */
+.btn-pill-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0084ff 0%, #6366f1 50%, #7c3aed 100%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 9999px;
+  padding: 0.625rem 1.375rem;
+  box-shadow: 0 4px 14px -2px rgba(0, 132, 255, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-pill-brand:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px -2px rgba(124, 58, 237, 0.38);
+}
+
+.btn-pill-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 9999px;
+  padding: 0.625rem 1.375rem;
+  box-shadow: 0 2px 8px -1px rgba(15, 23, 42, 0.12);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-pill-primary:hover {
+  background-color: #0077ff;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px -2px rgba(0, 119, 255, 0.3);
+}
+
+.btn-pill-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 9999px;
+  padding: 0.625rem 1.375rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.03);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-pill-secondary:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Accessible Focus States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #0077ff;
+  outline-offset: 2px;
+}
+
+/* Slider */
+input[type="range"].velocity-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 9999px;
+  outline: none;
+  transition: background 0.2s;
+}
+
+input[type="range"].velocity-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0077ff;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 119, 255, 0.35);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"].velocity-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #7c3aed;
+}
+
+input[type="range"].velocity-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0077ff;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 119, 255, 0.35);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
