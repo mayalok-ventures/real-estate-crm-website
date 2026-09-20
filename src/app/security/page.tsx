@@ -21,49 +21,56 @@ import {
 } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 
-export const metadata: Metadata = {
+import { generateSeoMetadata } from "@/lib/seo/metadata";
+
+export const metadata: Metadata = generateSeoMetadata({
   title: "Data Security Architecture & Tenant Isolation — Sahyak CRM",
   description:
-    "Explore the architectural layers of Sahyak: Organization context, cryptographic tenant isolation, role-based access control, anti-poaching phone masking, and immutable audit logs.",
-  alternates: {
-    canonical: "https://sahyak.com/security"
-  }
-};
+    "Explore Sahyak's security architecture: tenant-scoped data access, role-based permissions, secure transport, webhook verification, and auditable support access.",
+  path: "/security",
+  keywords: [
+    "real estate CRM data security",
+    "tenant isolation real estate",
+    "CRM role based access control",
+    "real estate webhook verification",
+    "audit access logging CRM",
+  ],
+});
 
 const ARCHITECTURE_STEPS = [
   {
     step: "01",
     title: "ORGANIZATION CONTEXT",
     tagline: "Workspace Boundary",
-    detail: "Every brokerage workspace operates in a logically separated tenant boundary. No shared tables or cross-tenant leaks.",
+    detail: "Each organization operates within a tenant-scoped workspace boundary, with application queries and access paths scoped to the organization context.",
     badge: "IMPLEMENTED"
   },
   {
     step: "02",
     title: "TENANT ISOLATION",
-    tagline: "Cryptographic Partitioning",
-    detail: "Database queries are scoped by strict tenant cryptographic identifiers at the ORM layer before execution.",
+    tagline: "Organization-Scoped Data Access",
+    detail: "Application queries are scoped to the organization's workspace context, helping prevent one organization's CRM data from being accessed through another organization's normal application flow.",
     badge: "IMPLEMENTED"
   },
   {
     step: "03",
     title: "ACCESS CONTROL",
-    tagline: "Granular Role Hierarchy",
-    detail: "Brokers, Team Leads, Telecallers, and Admins have strictly partitioned view/edit permissions.",
+    tagline: "Role-Based Access Control",
+    detail: "Role-based permissions control which users can view, create, edit, export, or administer CRM data according to their assigned access.",
     badge: "IMPLEMENTED"
   },
   {
     step: "04",
     title: "DATA PROTECTION",
-    tagline: "Phone Masking & AES-256",
-    detail: "Client numbers masked (+91 98112•••••) for telecallers; data encrypted in-flight (TLS 1.3) and at rest.",
+    tagline: "Secure Transport & Access Controls",
+    detail: "Sensitive CRM access is protected through HTTPS/TLS, role-based permissions and application-level access controls. Supported workflows can also restrict visibility of sensitive contact information.",
     badge: "IMPLEMENTED"
   },
   {
     step: "05",
     title: "AUDIT TRAIL",
-    tagline: "Immutable Event Logging",
-    detail: "Every lead export, contact view, and proposal dispatch writes an immutable tamper-evident record.",
+    tagline: "Audited Activity Logging",
+    detail: "Audited administrative and support activities are recorded to provide traceability for sensitive operational access.",
     badge: "IMPLEMENTED"
   }
 ];
@@ -76,14 +83,13 @@ export default function SecurityPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-semibold mb-6">
             <ShieldCheck className="w-3.5 h-3.5" />
-            <span>Security Architecture &middot; Visual Story</span>
+            <span>Security Architecture &middot; Controls &amp; Posture</span>
           </div>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight max-w-4xl mx-auto font-heading leading-tight">
-            Your High-Net-Worth Client Database is <span className="brand-gradient-text">Architecturally Protected.</span>
+            Your Real Estate Sales Data, <span className="brand-gradient-text">Architecturally Protected.</span>
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            In Indian real estate, lead theft and contact poaching by departing agents destroy brokerages. 
-            Sahyak is built with step-down cryptographic isolation, phone masking, and strict audit logs.
+            Real estate teams handle sensitive buyer, sales and inventory data every day. Sahyak is built with tenant-scoped data access, role-based permissions, secure transport, webhook verification and auditable administrative access.
           </p>
         </div>
       </section>
@@ -134,11 +140,11 @@ export default function SecurityPage() {
             ))}
           </div>
 
-          {/* Enterprise Datacenter Cryptographic Vault Visual Anchor */}
+          {/* Illustrative Security Architecture Visual Anchor */}
           <div className="relative rounded-3xl overflow-hidden border border-slate-800 aspect-[21/9] sm:aspect-[24/9] shadow-2xl group">
             <Image
               src="/images/security-datacenter-vault.jpg"
-              alt="High-security enterprise cryptographic datacenter server vault"
+              alt="Illustrative security architecture diagram"
               fill
               sizes="(max-width: 1024px) 100vw, 960px"
               className="object-cover object-center brightness-90 group-hover:scale-102 transition-transform duration-700"
@@ -147,14 +153,14 @@ export default function SecurityPage() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div className="space-y-1">
                   <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950/80 border border-cyan-500/30 px-2.5 py-1 rounded inline-block">
-                    Physical &amp; Cryptographic Vault Infrastructure
+                    Security Architecture Illustration
                   </span>
                   <h3 className="text-base sm:text-lg font-bold text-white">
-                    Regional Indian Datacenter Partitioning &middot; AES-256 Storage
+                    Security Architecture &amp; Access Controls
                   </h3>
                 </div>
                 <span className="text-[11px] font-mono text-emerald-400 bg-emerald-950/80 border border-emerald-500/30 px-3 py-1 rounded-full shrink-0">
-                  TLS 1.3 &middot; Zero Exfiltration
+                  Tenant Isolation &middot; RBAC &middot; HTTPS/TLS
                 </span>
               </div>
             </div>
@@ -164,26 +170,26 @@ export default function SecurityPage() {
           <div className="p-6 sm:p-8 rounded-3xl bg-slate-950 border border-slate-800 space-y-6">
             <div className="flex items-center justify-between border-b border-slate-800 pb-3">
               <span className="text-xs font-mono text-slate-400 uppercase font-bold">
-                Static Logical Isolation Topology
+                Logical Isolation Topology (Illustration)
               </span>
-              <span className="text-[10px] font-mono text-emerald-400">Zero Cross-Tenant Leakage</span>
+              <span className="text-[10px] font-mono text-emerald-400">Organization-Scoped Data Access</span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono text-center">
               <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
                 <span className="text-slate-400 uppercase text-[10px] block">Tenant A (Brokerage 1)</span>
-                <span className="text-white font-bold block">Isolated Token Scope</span>
-                <span className="text-emerald-400 text-[10px]">Masked Contacts (+91 98112•••••)</span>
+                <span className="text-white font-bold block">Organization-Scoped Access</span>
+                <span className="text-emerald-400 text-[10px]">Scoped Workspace Access</span>
               </div>
               <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
                 <span className="text-slate-400 uppercase text-[10px] block">Tenant B (Brokerage 2)</span>
-                <span className="text-white font-bold block">Isolated Token Scope</span>
-                <span className="text-emerald-400 text-[10px]">Masked Contacts (+91 98223•••••)</span>
+                <span className="text-white font-bold block">Organization-Scoped Access</span>
+                <span className="text-emerald-400 text-[10px]">Scoped Workspace Access</span>
               </div>
               <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
                 <span className="text-slate-400 uppercase text-[10px] block">Tenant C (Developer)</span>
-                <span className="text-white font-bold block">Isolated Token Scope</span>
-                <span className="text-emerald-400 text-[10px]">Multi-Tower Inventory DB</span>
+                <span className="text-white font-bold block">Organization-Scoped Access</span>
+                <span className="text-emerald-400 text-[10px]">Multi-Tower Inventory Access</span>
               </div>
             </div>
           </div>
@@ -193,9 +199,9 @@ export default function SecurityPage() {
             <div className="p-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between text-xs font-mono text-slate-400">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>security-vault-architecture.mp4</span>
+                <span>security-architecture-model.mp4</span>
               </div>
-              <span className="text-cyan-400">Supporting Architecture Evidence</span>
+              <span className="text-cyan-400">Architecture Overview Visual</span>
             </div>
             <div className="aspect-video w-full bg-slate-950 flex items-center justify-center">
               <video
@@ -205,7 +211,7 @@ export default function SecurityPage() {
                 playsInline
                 preload="metadata"
                 className="w-full h-full object-cover"
-                aria-label="Sahyak cryptographic security vault video"
+                aria-label="Sahyak security architecture video"
               >
                 <source src="/videos/security-vault-architecture.mp4" type="video/mp4" />
               </video>
@@ -224,7 +230,7 @@ export default function SecurityPage() {
               Transparent Security Posture
             </h2>
             <p className="text-sm text-slate-500">
-              Clear separation between implemented technical controls, compliance alignment, and architectural roadmap.
+              Clear separation between implemented technical controls, compliance alignment, and architectural exploration.
             </p>
           </div>
 
@@ -241,27 +247,33 @@ export default function SecurityPage() {
 
               <div className="space-y-3 text-xs text-slate-700">
                 <div className="space-y-1">
-                  <span className="font-bold text-slate-900 block">Anti-Poaching Phone Masking:</span>
+                  <span className="font-bold text-slate-900 block">Tenant-Scoped Data Access:</span>
                   <p className="text-slate-600 leading-relaxed">
-                    Raw buyer numbers (+91 98112•••••) masked from telecallers and agents to prevent client database exfiltration.
+                    CRM queries and access paths are scoped to the organization&apos;s workspace context.
                   </p>
                 </div>
                 <div className="space-y-1">
-                  <span className="font-bold text-slate-900 block">Cryptographic Tenant Scoping:</span>
+                  <span className="font-bold text-slate-900 block">Role-Based Access Control:</span>
                   <p className="text-slate-600 leading-relaxed">
-                    Every query enforces tenant identity checks at the ORM layer, preventing data leakage.
+                    Permissions are assigned according to user roles and operational responsibilities.
                   </p>
                 </div>
                 <div className="space-y-1">
-                  <span className="font-bold text-slate-900 block">In-Transit &amp; At-Rest Encryption:</span>
+                  <span className="font-bold text-slate-900 block">Secure Transport:</span>
                   <p className="text-slate-600 leading-relaxed">
-                    TLS 1.3 enforced for all browser sessions; AES-256 encryption on Cloudflare D1 storage.
+                    HTTPS/TLS protects data while it moves between clients and the application.
                   </p>
                 </div>
                 <div className="space-y-1">
-                  <span className="font-bold text-slate-900 block">Immutable Export Audit Logs:</span>
+                  <span className="font-bold text-slate-900 block">Audited Support Access:</span>
                   <p className="text-slate-600 leading-relaxed">
-                    Every CSV export writes an immutable audit record with actor, timestamp, IP, and lead count.
+                    Administrative and support access is traceable through audit records.
+                  </p>
+                </div>
+                <div className="space-y-1">
+                  <span className="font-bold text-slate-900 block">Webhook Verification:</span>
+                  <p className="text-slate-600 leading-relaxed">
+                    Supported inbound webhooks use HMAC SHA-256 verification to validate signed requests.
                   </p>
                 </div>
               </div>
@@ -278,52 +290,52 @@ export default function SecurityPage() {
 
               <div className="space-y-3 text-xs text-slate-700">
                 <div className="space-y-1">
-                  <span className="font-bold text-slate-900 block">Role-Based Access Control (RBAC):</span>
+                  <span className="font-bold text-slate-900 block">DPDP Readiness:</span>
                   <p className="text-slate-600 leading-relaxed">
-                    Strict tenant segregation, granular permission hierarchies, and least-privilege administrative access policies.
+                    Sahyak&apos;s privacy and product architecture is being developed with principles such as data minimization, purpose limitation and appropriate consent handling in mind.
                   </p>
                 </div>
                 <div className="space-y-1">
-                  <span className="font-bold text-slate-900 block">DPDP Act 2023 Readiness:</span>
+                  <span className="font-bold text-slate-900 block">Data Minimization Principles:</span>
                   <p className="text-slate-600 leading-relaxed">
-                    Designed around Indian data protection principles: data minimization, purpose limitation, and consent verification.
+                    Operational workflows capture and process only customer and transaction data required for active pipeline execution.
                   </p>
                 </div>
                 <div className="space-y-1">
-                  <span className="font-bold text-slate-900 block">Indian Data Sovereignty:</span>
+                  <span className="font-bold text-slate-900 block">Administrative Governance:</span>
                   <p className="text-slate-600 leading-relaxed">
-                    Database storage nodes located in compliant regional infrastructure within India.
+                    Support access to production environments follows strict administrative separation and traceable activity logging.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Column 3: Future Roadmap */}
+            {/* Column 3: Future Security Exploration */}
             <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-mono font-bold uppercase text-purple-700 bg-purple-100 px-2.5 py-0.5 rounded">
-                  ARCHITECTURAL ROADMAP
+                  FUTURE SECURITY EXPLORATION
                 </span>
                 <Sparkles className="w-4 h-4 text-purple-600" />
               </div>
 
               <div className="space-y-3 text-xs text-slate-700">
                 <div className="space-y-1">
-                  <span className="font-bold text-slate-900 block">Client-Side Zero-Knowledge Encryption:</span>
+                  <span className="font-bold text-slate-900 block">Client-Side Field Encryption:</span>
                   <p className="text-slate-600 leading-relaxed">
-                    Evaluating cryptographic client-side field indexing for ultra-sensitive HNI financial net-worth data.
+                    Exploring client-side encryption for selected sensitive fields.
                   </p>
                 </div>
                 <div className="space-y-1">
-                  <span className="font-bold text-slate-900 block">Hardware Security Key (FIDO2) Support:</span>
+                  <span className="font-bold text-slate-900 block">Hardware Security Key / WebAuthn Support:</span>
                   <p className="text-slate-600 leading-relaxed">
-                    YubiKey and biometric WebAuthn logins for enterprise sales head and admin accounts.
+                    Exploring hardware security key / WebAuthn support for administrator accounts.
                   </p>
                 </div>
                 <div className="space-y-1">
-                  <span className="font-bold text-slate-900 block">Automated DLP Anomaly Alerts:</span>
+                  <span className="font-bold text-slate-900 block">Automated Anomaly Detection:</span>
                   <p className="text-slate-600 leading-relaxed">
-                    Real-time machine learning detection of anomalous bulk contact views or after-hours exports.
+                    Exploring automated anomaly detection for unusual data-access patterns.
                   </p>
                 </div>
               </div>

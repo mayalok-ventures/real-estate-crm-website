@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { generateSeoMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = generateSeoMetadata({
-  title: "Transparent Real Estate CRM Pricing — Free Starter to Enterprise | Sahyak CRM",
+  title: "Real Estate CRM Pricing — ₹499 Base Access | Sahyak",
   description:
-    "Simple, predictable pricing built for real estate. Start free with 20 leads and 1 user seat. Scale capacity with transparent modular add-ons and zero forced contracts.",
+    "Simple real estate CRM pricing built around capacity. Start at ₹499 and scale users, leads, storage, and integrations as your sales operation grows.",
   path: "/pricing",
   keywords: [
     "real estate CRM pricing",

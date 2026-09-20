@@ -341,7 +341,7 @@ export default async function SolutionSlugPage({ params }: PageProps) {
             Ready to upgrade your real estate sales velocity?
           </h2>
           <p className="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
-            Start immediately on our Free Starter Tier: 20 active leads, 1 user seat, 10 WhatsApp actions, and 3 properties included forever with zero credit card required.
+            Start immediately on our Free Starter Tier: 20 active leads, 1 user seat, 10 WhatsApp actions, and 3 properties included with zero credit card required.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <Link

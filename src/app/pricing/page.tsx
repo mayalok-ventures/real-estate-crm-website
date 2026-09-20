@@ -322,12 +322,15 @@ export default function PricingPage() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-slate-900 font-bold text-sm">
                       <Layers className="w-4 h-4 text-amber-600" />
-                      <span>Connected Ad / Portal Platforms</span>
+                      <span>Connected Platforms &amp; Integrations</span>
                     </div>
                     <span className="text-xs font-mono font-bold text-amber-600">
                       {calcResult.selectedIntegrationTier.label}
                     </span>
                   </div>
+                  <p className="text-[11px] text-slate-500">
+                    Pay according to the number of external platforms/services you connect.
+                  </p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                     {INTEGRATION_TIERS.map((tier, idx) => (
                       <button
@@ -469,11 +472,11 @@ export default function PricingPage() {
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <p className="text-[11px] text-slate-400 text-center font-mono">
-                    No setup fees &middot; Cancel anytime &middot; GST Invoicing available
+                    No setup fees &middot; Transparent billing &middot; GST invoice available
                   </p>
                   {currency !== "INR" && (
                     <div className="p-3 bg-amber-50/80 rounded-xl border border-amber-200/60 text-[11px] text-amber-900 leading-relaxed">
-                      <span className="font-bold">Transparent Billing Notice:</span> Display prices in {currency} are converted based on live foreign exchange rates for global teams. Invoices and subscription payments are processed in Indian Rupees (INR) at checkout.
+                      <span className="font-bold">Transparent Billing Notice:</span> Displayed prices are converted for reference. Subscription billing and invoices are processed in INR.
                     </div>
                   )}
                 </div>
@@ -497,10 +500,10 @@ export default function PricingPage() {
                 EVALUATION TIER
               </span>
               <h3 className="text-2xl font-extrabold text-slate-900">
-                Free Starter &middot; ₹0 Forever
+                Free Starter &middot; ₹0
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 max-w-xl">
-                Test Sahyak on active campaigns with zero risk. Includes 20 active leads, 1 user seat, 10 WhatsApp actions, and 3 properties. No credit card required.
+                Test Sahyak with 20 active leads, 1 user seat, 10 WhatsApp actions, and 3 properties. No credit card required.
               </p>
             </div>
             <Link
@@ -543,10 +546,10 @@ export default function PricingPage() {
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[11px] leading-relaxed">
               <p>
-                <strong>WhatsApp Hub:</strong> Sahyak includes full WhatsApp integration and verified templates without per-message markup. External Meta/WhatsApp Business API provider message charges remain separate.
+                <strong>WhatsApp Hub:</strong> WhatsApp integration is included without a separate SAHYAK per-message charge. External Meta/WhatsApp Business API or provider charges, where applicable, remain separate.
               </p>
               <p>
-                <strong>GST &amp; Invoicing:</strong> Registered business invoices with GST input credit are issued automatically on every payment.
+                <strong>GST &amp; Invoicing:</strong> GST invoices are issued for eligible transactions. Input tax credit, where applicable, depends on the customer&apos;s tax eligibility.
               </p>
             </div>
           </div>

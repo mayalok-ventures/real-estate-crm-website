@@ -124,7 +124,7 @@ export const pricingConfig = {
     badge: "EVALUATION TIER",
     price: 0,
     pricePeriod: "Free",
-    description: "Experience the real-estate pipeline with zero risk or card required.",
+    description: "Test Sahyak with 20 active leads, 1 user seat, 10 WhatsApp actions, and 3 properties. No credit card required.",
     ctaText: "Start Free",
     ctaHref: "https://crm.sahyak.com/signup/",
     inclusions: [

@@ -51,7 +51,7 @@ export default function PrivacyPage() {
           <div>
             <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-3">3. How Your Data Is Stored &amp; Protected</h2>
             <p>
-              All customer data is encrypted in transit using TLS 1.3 and encrypted at rest using AES-256 standard encryption. Each organization is partitioned with strict cryptographic tenant identifiers, ensuring that no tenant can ever view another customer&apos;s records.
+              Customer data in transit is protected using HTTPS/TLS encryption. Application access and database queries are tenant-scoped to the organization workspace boundary, helping prevent cross-tenant data access.
             </p>
           </div>
 

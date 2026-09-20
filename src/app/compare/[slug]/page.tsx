@@ -144,7 +144,7 @@ export default async function CompareSlugPage({ params }: PageProps) {
       traditionalDetail: "Zero dedicated software cost, making spreadsheets the ideal choice for solo brokers operating with zero marketing budget.",
       traditionalFit: "yes" as const,
       crmOption: "Free Starter Tier (₹0) / ₹499 Base",
-      crmDetail: "Free Starter tier includes 20 active leads and 1 user seat forever. Transparent Base plan at ₹499/mo for growing brokerages.",
+      crmDetail: "Free Starter tier includes 20 active leads and 1 user seat. Transparent Base plan at ₹499/mo for growing brokerages.",
       crmFit: "yes" as const,
     },
   ];
@@ -326,7 +326,7 @@ export default async function CompareSlugPage({ params }: PageProps) {
             Try the real estate first workflow risk-free
           </h2>
           <p className="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
-            Start on our Free Starter Tier: 20 active leads, 1 user seat, 10 WhatsApp actions, and 3 properties included forever with zero credit card required.
+            Start on our Free Starter Tier: 20 active leads, 1 user seat, 10 WhatsApp actions, and 3 properties included with zero credit card required.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <Link

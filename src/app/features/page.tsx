@@ -290,7 +290,7 @@ const WORKFLOW_MODULES: WorkflowModule[] = [
       "Multi-tenant logical data isolation ensuring complete organizational data partitioning",
       "Granular Role-Based Access Control (RBAC) restricting phone export and unit blocking by user tier",
       "Inbound webhook authentication using cryptographic HMAC SHA-256 signatures",
-      "Secure transmission over TLS 1.3 with audited administrator session security",
+      "Secure transmission over HTTPS/TLS with audited administrator session security",
       "Zero third-party tracker data selling or cross-tenant data visibility"
     ],
     uiBadge: "SECURITY CORE",
