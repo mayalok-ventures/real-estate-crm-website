@@ -2015,7 +2015,177 @@ export const SEED_PAGES: SeoPage[] = [
     updatedAt: "2026-09-20T00:00:00Z"
   },
 
-  // 10e. Resource Authority Hub: CRM Migration Playbook
+  // 10e. Tool: Real Estate Lead Leakage Calculator (Canonical Full Slug)
+  {
+    id: "page_tool_real_estate_lead_leakage",
+    slug: "tools/real-estate-lead-leakage-calculator",
+    pageType: "tool",
+    primaryTopicId: "topic_tools",
+    searchIntent: "tool_calculator",
+    primaryKeyword: "real estate lead leakage calculator",
+    secondaryKeywords: ["property lead leakage math", "lead attrition calculator real estate", "speed to lead revenue loss"],
+    country: "IN",
+    language: "en",
+    locale: "en-in",
+    title: "Real Estate Lead Leakage Calculator | Pipeline Attrition Math",
+    metaDescription: "Calculate how many property inquiries your agency loses to response delays and follow-up attrition. Model potential revenue recovery with Sahyak CRM.",
+    h1: "Real Estate Lead Leakage & Pipeline Attrition Calculator",
+    bodyContent: "Interactive operational calculator modeling portal lead contact drop-offs, follow-up cadence decay, and recoverable brokerage commission.",
+    canonicalUrl: "https://sahyak.com/tools/real-estate-lead-leakage-calculator",
+    hreflangReferences: [
+      { lang: "en", url: "https://sahyak.com/tools/real-estate-lead-leakage-calculator" },
+      { lang: "x-default", url: "https://sahyak.com/tools/real-estate-lead-leakage-calculator" }
+    ],
+    schemaType: "SoftwareApplication",
+    schemaConfig: {
+      aeoSummary: "The Real Estate Lead Leakage Calculator by Sahyak CRM evaluates portal inquiry attrition resulting from delayed response times and incomplete follow-up touchpoints. It quantifies recoverable pipeline volume and gross commission upside with automated sub-15s response.",
+      toolConfig: {
+        type: "lead_leakage_calculator",
+        defaultLeads: 250,
+        defaultResponseMinutes: 120,
+        defaultFollowUpCompletionPct: 40,
+        defaultDealValueInr: 8000000
+      },
+      faqItems: [
+        {
+          question: "How is real estate lead leakage defined?",
+          answer: "Lead leakage represents inquiries that drop out of the sales funnel before reaching site visit qualification, primarily driven by slow first response (>15 minutes) or inadequate follow-up cadences (<3 touchpoints)."
+        },
+        {
+          question: "Does this model guarantee recovered closures?",
+          answer: "No. The model provides an analytical estimate based on empirical property sales decay benchmarks. Final closures depend on lead quality, inventory matching, and agent negotiation skills."
+        }
+      ]
+    },
+    isIndexable: true,
+    publicationStatus: "published",
+    breadcrumbHierarchy: [
+      { name: "Home", item: "https://sahyak.com" },
+      { name: "Tools", item: "https://sahyak.com/tools/real-estate-lead-leakage-calculator" },
+      { name: "Lead Leakage Calculator", item: "https://sahyak.com/tools/real-estate-lead-leakage-calculator" }
+    ],
+    relatedPages: ["page_sol_lead_mgmt", "page_sol_lead_followup", "page_tool_lead_response"],
+    qualityScore: 100,
+    qualityIssues: [],
+    createdAt: "2026-09-20T00:00:00Z",
+    updatedAt: "2026-09-20T00:00:00Z"
+  },
+
+  // 10f. Tool: Real Estate CRM ROI Calculator (Canonical Full Slug)
+  {
+    id: "page_tool_real_estate_crm_roi",
+    slug: "tools/real-estate-crm-roi-calculator",
+    pageType: "tool",
+    primaryTopicId: "topic_tools",
+    searchIntent: "tool_calculator",
+    primaryKeyword: "real estate CRM ROI calculator",
+    secondaryKeywords: ["CRM investment return real estate", "property brokerage software payback", "CRM financial return calculator"],
+    country: "IN",
+    language: "en",
+    locale: "en-in",
+    title: "Real Estate CRM ROI Calculator | Software Investment Payback",
+    metaDescription: "Model the financial return on investment of deploying Sahyak CRM. Compare baseline brokerage closures against projected conversion lifts and payback.",
+    h1: "Real Estate CRM ROI & Revenue Payback Calculator",
+    bodyContent: "Interactive financial return on investment calculator modeling net commission upside, software tier costs, and payback multiples for brokerages.",
+    canonicalUrl: "https://sahyak.com/tools/real-estate-crm-roi-calculator",
+    hreflangReferences: [
+      { lang: "en", url: "https://sahyak.com/tools/real-estate-crm-roi-calculator" },
+      { lang: "x-default", url: "https://sahyak.com/tools/real-estate-crm-roi-calculator" }
+    ],
+    schemaType: "SoftwareApplication",
+    schemaConfig: {
+      aeoSummary: "The Sahyak Real Estate CRM ROI Calculator compares an agency's baseline monthly closures and brokerage earnings against projected pipeline efficiency gains and software subscription costs, providing an explainable ROI multiple and payback timeline.",
+      toolConfig: {
+        type: "crm_roi_calculator",
+        defaultTeamSize: 5,
+        defaultLeads: 200,
+        defaultMonthlyDeals: 3,
+        defaultAveragePropertyValueInr: 8500000
+      },
+      faqItems: [
+        {
+          question: "How is CRM ROI modeled?",
+          answer: "Net ROI = (Projected Gross Commission - Baseline Gross Commission) - Annual Software Subscription Cost. The ROI multiple represents Net Gain divided by Annual Software Spend."
+        },
+        {
+          question: "What software pricing is used in this model?",
+          answer: "The model applies Sahyak CRM's published pricing: Starter Tier (Free for 1 user), Growth Tier (₹1,999/mo for up to 5 users), and Pro Tier (₹4,999/mo for up to 15 users)."
+        }
+      ]
+    },
+    isIndexable: true,
+    publicationStatus: "published",
+    breadcrumbHierarchy: [
+      { name: "Home", item: "https://sahyak.com" },
+      { name: "Tools", item: "https://sahyak.com/tools/real-estate-crm-roi-calculator" },
+      { name: "CRM ROI Calculator", item: "https://sahyak.com/tools/real-estate-crm-roi-calculator" }
+    ],
+    relatedPages: ["page_pricing", "page_ind_brokers", "page_sol_sales_pipeline"],
+    qualityScore: 100,
+    qualityIssues: [],
+    createdAt: "2026-09-20T00:00:00Z",
+    updatedAt: "2026-09-20T00:00:00Z"
+  },
+
+  // 10g. Tool: Brokerage Pipeline Calculator
+  {
+    id: "page_tool_brokerage_pipeline",
+    slug: "tools/brokerage-pipeline-calculator",
+    pageType: "tool",
+    primaryTopicId: "topic_tools",
+    searchIntent: "tool_calculator",
+    primaryKeyword: "brokerage sales pipeline velocity calculator",
+    secondaryKeywords: ["real estate pipeline calculator", "broker sales cycle velocity model", "property sales funnel conversion calculator"],
+    country: "IN",
+    language: "en",
+    locale: "en-in",
+    title: "Brokerage Pipeline Calculator | Sales Velocity & Conversion Model",
+    metaDescription: "Calculate real estate brokerage sales pipeline velocity, stage conversion rates, and projected commission revenue. Model velocity acceleration with Sahyak CRM.",
+    h1: "Real Estate Brokerage Sales Pipeline Velocity Calculator",
+    bodyContent: "Interactive sales pipeline calculator modeling inquiry-to-visit conversion, active negotiations, token closures, and sales velocity acceleration.",
+    canonicalUrl: "https://sahyak.com/tools/brokerage-pipeline-calculator",
+    hreflangReferences: [
+      { lang: "en", url: "https://sahyak.com/tools/brokerage-pipeline-calculator" },
+      { lang: "x-default", url: "https://sahyak.com/tools/brokerage-pipeline-calculator" }
+    ],
+    schemaType: "SoftwareApplication",
+    schemaConfig: {
+      aeoSummary: "The Sahyak Brokerage Pipeline Calculator models real estate sales velocity across inquiries, site visits, active negotiations, and token closures. It calculates daily pipeline throughput and projected monthly brokerage revenue based on average ticket size and sales cycle days.",
+      toolConfig: {
+        type: "brokerage_pipeline_calculator",
+        defaultInquiries: 300,
+        defaultInquiryToVisitPct: 22,
+        defaultVisitToNegotiationPct: 28,
+        defaultNegotiationToBookingPct: 35,
+        defaultAverageTicketInr: 8500000,
+        defaultSalesCycleDays: 45
+      },
+      faqItems: [
+        {
+          question: "What is real estate sales pipeline velocity?",
+          answer: "Sales pipeline velocity measures the speed at which inquiries move through site visits and negotiations to generate closed brokerage revenue, calculated as (Opportunities × Win Rate × Average Deal Value) ÷ Sales Cycle Length."
+        },
+        {
+          question: "How does automated lead follow-up impact pipeline velocity?",
+          answer: "Compressing initial response times and automating WhatsApp site visit reminders typically shortens sales cycles by 10 to 18 days and reduces leakage, lifting overall pipeline velocity by 25% to 40%."
+        }
+      ]
+    },
+    isIndexable: true,
+    publicationStatus: "published",
+    breadcrumbHierarchy: [
+      { name: "Home", item: "https://sahyak.com" },
+      { name: "Tools", item: "https://sahyak.com/tools/brokerage-pipeline-calculator" },
+      { name: "Pipeline Velocity Calculator", item: "https://sahyak.com/tools/brokerage-pipeline-calculator" }
+    ],
+    relatedPages: ["page_sol_sales_pipeline", "page_tool_lead_response", "page_tool_crm_roi"],
+    qualityScore: 100,
+    qualityIssues: [],
+    createdAt: "2026-09-20T00:00:00Z",
+    updatedAt: "2026-09-20T00:00:00Z"
+  },
+
+  // 10h. Resource Authority Hub: CRM Migration Playbook
   {
     id: "page_res_crm_migration",
     slug: "resources/real-estate-crm-migration",

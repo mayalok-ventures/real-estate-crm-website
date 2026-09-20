@@ -23,6 +23,7 @@ import { CommissionCalculator } from "@/components/tools/CommissionCalculator";
 import { LeadLeakageCalculator } from "@/components/tools/LeadLeakageCalculator";
 import { CrmRoiCalculator } from "@/components/tools/CrmRoiCalculator";
 import { MigrationChecklistTool } from "@/components/tools/MigrationChecklistTool";
+import { BrokeragePipelineCalculator } from "@/components/tools/BrokeragePipelineCalculator";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -131,9 +132,10 @@ export default async function ToolSlugPage({ params }: PageProps) {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {slug === "lead-response-time-calculator" && <LeadResponseCalculator />}
         {slug === "real-estate-commission-calculator" && <CommissionCalculator />}
-        {slug === "lead-leakage-calculator" && <LeadLeakageCalculator />}
-        {slug === "crm-roi-calculator" && <CrmRoiCalculator />}
-        {slug === "real-estate-crm-migration-checklist" && <MigrationChecklistTool />}
+        {(slug === "lead-leakage-calculator" || slug === "real-estate-lead-leakage-calculator") && <LeadLeakageCalculator />}
+        {(slug === "crm-roi-calculator" || slug === "real-estate-crm-roi-calculator") && <CrmRoiCalculator />}
+        {(slug === "real-estate-crm-migration-checklist" || slug === "crm-migration-readiness-checklist") && <MigrationChecklistTool />}
+        {slug === "brokerage-pipeline-calculator" && <BrokeragePipelineCalculator />}
       </main>
 
       {/* Tool FAQs */}
