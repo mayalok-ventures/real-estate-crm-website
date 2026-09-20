@@ -201,11 +201,12 @@ export async function fetchGscSearchAnalytics(
   const endDate = options.endDate || defaultEnd.toISOString().split("T")[0];
   const rowLimit = options.rowLimit || 5000;
 
-  const endpoint = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(
-    creds.siteUrl
+  let currentSiteUrl = creds.siteUrl;
+  let endpoint = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(
+    currentSiteUrl
   )}/searchAnalytics/query`;
 
-  const response = await fetchWithRetry(endpoint, {
+  let response = await fetchWithRetry(endpoint, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${accessToken}`,
@@ -218,6 +219,37 @@ export async function fetchGscSearchAnalytics(
       rowLimit,
     }),
   });
+
+  // Auto-recovery: if 403, try the alternate property format (sc-domain vs URL-prefix)
+  if (response.status === 403) {
+    const hostname = new URL(siteConfig.url).hostname;
+    const alternateUrl = currentSiteUrl.startsWith("sc-domain:")
+      ? `https://${hostname}/`
+      : `sc-domain:${hostname}`;
+
+    const altEndpoint = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(
+      alternateUrl
+    )}/searchAnalytics/query`;
+
+    const altResponse = await fetchWithRetry(altEndpoint, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        startDate,
+        endDate,
+        dimensions: ["date", "query", "page", "country", "device"],
+        rowLimit,
+      }),
+    });
+
+    if (altResponse.ok) {
+      response = altResponse;
+      currentSiteUrl = alternateUrl;
+    }
+  }
 
   if (!response.ok) {
     const errorText = await response.text();
