@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdminSessionToken } from "@/lib/security";
 import { getMarketIntelligence } from "@/lib/seo/market-intelligence";

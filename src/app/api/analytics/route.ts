@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { NextRequest, NextResponse } from "next/server";
 import { getCloudflareD1 } from "@/lib/cloudflare-context";
 import { recordAnalyticsEvent, IngestEvent } from "@/lib/analytics-store";

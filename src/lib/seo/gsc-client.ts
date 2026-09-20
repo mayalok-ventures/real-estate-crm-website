@@ -101,17 +101,24 @@ async function getGoogleAccessToken(creds: GscCredentials): Promise<string> {
     }
   }
 
-  if (!signature) {
-    const nodeCrypto = await import("crypto");
-    const signer = nodeCrypto.createSign("RSA-SHA256");
-    signer.update(unsignedToken);
-    signer.end();
-    signature = signer
-      .sign(creds.privateKey)
-      .toString("base64")
-      .replace(/=/g, "")
-      .replace(/\+/g, "-")
-      .replace(/\//g, "_");
+  if (!signature && typeof globalThis !== "undefined" && "process" in globalThis) {
+    try {
+      const gProcess = (globalThis as any).process;
+      if (gProcess?.versions?.node) {
+        const nodeCrypto = await (Function('return import("node:crypto")')() as Promise<any>);
+        const signer = nodeCrypto.createSign("RSA-SHA256");
+        signer.update(unsignedToken);
+        signer.end();
+        signature = signer
+          .sign(creds.privateKey)
+          .toString("base64")
+          .replace(/=/g, "")
+          .replace(/\+/g, "-")
+          .replace(/\//g, "_");
+      }
+    } catch {
+      // Fallback unavailable
+    }
   }
 
   const assertion = `${unsignedToken}.${signature}`;

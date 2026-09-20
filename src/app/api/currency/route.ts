@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { NextResponse } from "next/server";
 import { getExchangeRates, SUPPORTED_CURRENCIES } from "@/lib/currency";
 

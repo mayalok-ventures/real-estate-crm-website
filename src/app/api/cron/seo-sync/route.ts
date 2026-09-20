@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { NextRequest, NextResponse } from "next/server";
 import { syncSearchConsoleData } from "@/lib/seo/gsc-client";
 import { evaluateSearchOpportunities } from "@/lib/seo/opportunity-engine";

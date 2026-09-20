@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { NextRequest, NextResponse } from "next/server";
 import { verifyAdminSessionToken } from "@/lib/security";
 import { syncSearchConsoleData, getGscSyncState } from "@/lib/seo/gsc-client";
