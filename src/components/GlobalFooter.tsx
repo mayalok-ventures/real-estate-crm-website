@@ -13,7 +13,7 @@ export function GlobalFooter() {
           <div className="flex flex-wrap items-center gap-3">
             <span className="flex items-center gap-1.5 text-slate-800 font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-500" />
-              All Production Systems Live
+              Platform Status: Operational
             </span>
             <span className="text-slate-300 hidden sm:inline">|</span>
             <span className="hidden sm:inline">WhatsApp Cloud API Ready</span>

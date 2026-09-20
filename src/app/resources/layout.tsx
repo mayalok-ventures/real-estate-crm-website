@@ -2,16 +2,19 @@ import type { Metadata } from "next";
 import { generateSeoMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = generateSeoMetadata({
-  title: "Real Estate Sales Playbooks, WhatsApp Scripts & API Specs | Sahyak CRM",
+  title: "Real Estate Sales Resources & Operating Hub | Sahyak CRM",
   description:
-    "Actionable operational resources for real estate brokers and developers. High-converting WhatsApp templates, Sunday site visit logistics checklist, and webhook specs.",
+    "Practical guides, interactive calculators, field checklists, and sales operating resources built for real estate sales teams, brokers, and property developers.",
   path: "/resources",
   keywords: [
-    "real estate sales playbooks",
+    "real estate sales resources",
+    "real estate CRM tools",
+    "lead response time calculator",
+    "real estate commission calculator",
+    "real estate lead leakage calculator",
     "real estate WhatsApp templates",
     "site visit checklist",
-    "property lead webhook API",
-    "broker follow-up scripts",
+    "real estate CRM migration",
   ],
 });
 

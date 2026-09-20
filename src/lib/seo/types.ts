@@ -33,7 +33,8 @@ export type SchemaType =
   | "BreadcrumbList"
   | "Article"
   | "FAQPage"
-  | "Product";
+  | "Product"
+  | "CollectionPage";
 
 export interface HreflangReference {
   lang: string; // e.g. "en", "en-IN", "en-US", "x-default"

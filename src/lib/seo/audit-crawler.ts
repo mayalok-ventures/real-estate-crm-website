@@ -264,7 +264,7 @@ export async function runSeoAudit(): Promise<{
     }
 
     // 9. Structured Data / JSON-LD Validation
-    const validSchemas = ["Organization", "WebSite", "SoftwareApplication", "BreadcrumbList", "Article", "FAQPage", "Product"];
+    const validSchemas = ["Organization", "WebSite", "SoftwareApplication", "BreadcrumbList", "Article", "FAQPage", "Product", "CollectionPage"];
     if (page.isIndexable && (!page.schemaType || page.schemaType.trim().length === 0)) {
       issues.push({
         id: `audit_missing_schema_${page.id}`,
